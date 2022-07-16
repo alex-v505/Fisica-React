@@ -8,11 +8,33 @@ function App() {
   const [nro1, setNro1] = useState();
   const [nro2, setNro2] = useState();
   const [r, setR] = useState(0);
+  const [cont, setContador]=useState(1);
 
   const calcular = () => {
     setR(parseFloat(nro1) / parseFloat(nro2));
   };
+  const [filasDatos, setFilasDatos] = useState([]);
 
+  const agregarFilTabla = () => {
+    setContador(cont+1);
+    const ingresoFil = {
+      num :cont,
+      distancia: nro1,
+      tiempo: nro2,
+      velocidad: parseFloat(nro1) / parseFloat(nro2)
+    }
+    setFilasDatos([...filasDatos, ingresoFil])
+
+  }
+  const eliminarFilTabla = (index) => {
+      const filas = [...filasDatos];
+      filas.splice(index, cont);
+      setContador(1);
+      setNro1('');
+      setNro2('');
+      setR('');
+      setFilasDatos(filas);
+  }
 
   return (
     <div className="App">
@@ -94,7 +116,7 @@ function App() {
                     </tr>
                   </thead>
                   <tbody>
-                  
+                  <Tabla filasDatos={filasDatos} eliminarFilTabla={eliminarFilTabla}  />
                   </tbody>
                 </table>
               </div>
