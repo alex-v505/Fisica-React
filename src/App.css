@@ -1,0 +1,32 @@
+.App {
+  text-align: center;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.accordion-button {
+  background-color: #2e3135 !important;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  color: white;
+}
+
+.accordion-button:enabled {
+  text-align: center;
+  color: white;
+}
+
+.accordion-item{
+  background-color:#2e3135 !important;
+}
+
