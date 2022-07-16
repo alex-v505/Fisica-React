@@ -71,7 +71,7 @@ function App() {
                     <button
                       type="button"
                       class="btn btn-light btn-lg m-2"
-                      style={{ fontSize: "1.5rem", fontFamily: "sans-serif" }}
+                      style={{ fontSize: "1.5rem", fontFamily: "sans-serif",backgroundColor:"white" }}
                       onClick={() => {
                         calcular();
                         agregarFilTabla();
@@ -82,8 +82,8 @@ function App() {
                   <div class="col">
                     <button
                       type="button"
-                      class="btn btn-light btn-lg m-2"
-                      style={{ fontSize: "1.5rem", fontFamily: "sans-serif" }}
+                      class="btn btn-lg m-2"
+                      style={{ fontSize: "1.5rem", fontFamily: "sans-serif",backgroundColor:"white" }}
                       onClick={() => {
                         
                         eliminarFilTabla();
